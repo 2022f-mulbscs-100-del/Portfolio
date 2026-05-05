@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { wrapGrid } from 'animate-css-grid';
 import Link from 'next/link';
 import { motion } from "framer-motion";
@@ -10,19 +10,19 @@ import AnimatedLineHeading from '@/components/AnimatedLineHeading';
 const Header = () => {
 
   const gridRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLaptop, setIsLaptop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
+  // const [isLaptop, setIsLaptop] = useState(false);
 
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-      setIsLaptop(window.innerWidth >= 1024);
-    };
-    handleResize(); // Run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 480);
+  //     setIsLaptop(window.innerWidth >= 1024);
+  //   };
+  //   handleResize(); // Run on mount
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
 
   useEffect(() => {

@@ -13,16 +13,16 @@ const words = [
   { first: 'turn ideas into products' },
   { first: 'write code that scales' },
 ];
-const wordsSingleLine = [
-  // { line: 'hi, i am zohaib' },
-  { line: 'a full stack developer' },
-  { line: 'a mern stack developer' },
-];
+// const wordsSingleLine = [
+//   // { line: 'hi, i am zohaib' },
+//   { line: 'a full stack developer' },
+//   { line: 'a mern stack developer' },
+// ];
 
 const AnimatedLineHeading = () => {
    const [currentIndex, setCurrentIndex] = useState(0);
   const [showFirst, setShowFirst] = useState(false);
-  const [showSecond, setShowSecond] = useState(false);
+  // const [showSecond, setShowSecond] = useState(false);
   const [renderKey, setRenderKey] = useState(0);
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
@@ -42,16 +42,16 @@ const AnimatedLineHeading = () => {
       const hasSecond = !!words[currentIndex];
 
       setShowFirst(true);
-      setShowSecond(false);
+      // setShowSecond(false);
       await wait(3000);
       if (isCancelled) return;
 
       if (hasSecond) {
-        setShowSecond(true);
+        // setShowSecond(true);
         await wait(3000);
         if (isCancelled) return;
 
-        setShowSecond(false);
+        // setShowSecond(false);
         await wait(3000);
         if (isCancelled) return;
       }
@@ -74,7 +74,7 @@ const AnimatedLineHeading = () => {
  
 
   const isXSM = windowWidth <= 480;
-  const isSM = windowWidth > 480 && windowWidth < 1024;
+  // const isSM = windowWidth > 480 && windowWidth < 1024;
   const isLG = windowWidth >= 1024;
   const isIntroLine = words[currentIndex].first === 'hi, i am zohaib';
 

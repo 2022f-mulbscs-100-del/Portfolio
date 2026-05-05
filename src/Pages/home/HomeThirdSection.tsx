@@ -7,13 +7,13 @@ import Link from "next/link";
 
  const HomeThirdSection = () => {
   
-     const [isMobile, setIsMobile] = useState(false);
+    //  const [isMobile, setIsMobile] = useState(false);
       const [isLaptop, setIsLaptop] = useState(false);
      const gridRef = useRef<HTMLDivElement>(null);
     
       useEffect(() => {
         const handleResize = () => {
-          setIsMobile(window.innerWidth <= 480);
+          // setIsMobile(window.innerWidth <= 480);
           setIsLaptop(window.innerWidth >= 1024);
         };
         handleResize(); // Run on mount

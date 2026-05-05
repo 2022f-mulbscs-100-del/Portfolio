@@ -3,7 +3,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FiDownload } from "react-icons/fi";
-import { usePathname } from 'next/navigation';
 
 
 type ButtonProps = {
@@ -12,7 +11,6 @@ type ButtonProps = {
 };
 
 const SubmitButton = ({ title, text }: ButtonProps) => {
-  const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);
   const [isHovered, setIsHovered] = useState(false);

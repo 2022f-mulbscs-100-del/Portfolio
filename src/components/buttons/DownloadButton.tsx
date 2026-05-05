@@ -11,7 +11,7 @@ type ButtonProps = {
   link?: string;
 };
 
-const DownloadButton = ({ title, text, link }: ButtonProps) => {
+const DownloadButton = ({ title, text }: ButtonProps) => {
   const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);

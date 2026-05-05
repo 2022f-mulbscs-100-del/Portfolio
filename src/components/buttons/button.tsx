@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 type ButtonProps = {

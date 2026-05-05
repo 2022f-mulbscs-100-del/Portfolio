@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import SkillButton from '@/components/SkillButton';
 const SkillSecondSection = () => {
@@ -44,19 +44,19 @@ const SkillSecondSection = () => {
     show: { opacity: 1, y: 0 },
   };
 
-  const [isClicked, setIsClicked] = useState(false);
-  const [isLaptop, setIsLaptop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
+  // const [isLaptop, setIsLaptop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-      setIsLaptop(window.innerWidth >= 1024);
-    };
-    handleResize(); // Run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 480);
+  //     setIsLaptop(window.innerWidth >= 1024);
+  //   };
+  //   handleResize(); // Run on mount
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <>
@@ -98,7 +98,6 @@ xsm:px-2 xsm:gap-4 '>
 
           {/* skill button */}
           <motion.div
-            onClick={() => { setIsClicked(true) }}
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0.25 }}

@@ -8,7 +8,7 @@ import DownloadButton from '@/components/buttons/DownloadButton';
 const AboutmeHeader = () => {
 
   const gridRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);
 
 
@@ -26,7 +26,7 @@ const AboutmeHeader = () => {
   // Update layout on screen resize
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
+      // setIsMobile(window.innerWidth <= 480);
       setIsLaptop(window.innerWidth >= 1024);
     };
     handleResize(); // Run on mount

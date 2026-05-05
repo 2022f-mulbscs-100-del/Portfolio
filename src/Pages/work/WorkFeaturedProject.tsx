@@ -102,7 +102,7 @@ const badgeClass: Record<ProjectRow["type"], string> = {
     "AUTOMATION": "bg-[#60A5FA]/8 text-[#7eb8ff] border border-[#60A5FA]/20",
     "Static": "bg-[#FBbf24]/8 text-[#f5c842] border border-[#FBbf24]/18",
     "Vibe Coded": "bg-[#C084FC]/8 text-[#c084fc] border border-[#C084FC]/18",
-    "Mobile": "bg-[#F87171]/8 text-[#f87171] border border-[#F87171]/18",
+    "MOBILE": "bg-[#F87171]/8 text-[#f87171] border border-[#F87171]/18",
 };
 function WorkFeaturedProject() {
     const [hoveredId, setHoveredId] = useState<string | null>(null);
@@ -152,10 +152,10 @@ function WorkFeaturedProject() {
                             </button>
                         ))}
                     </div>
-                    <div className='max-h-[400px] w-full overflow-y-scroll scrollBar px-8 py-15'>
+                    <div className='max-h-[600px] w-full overflow-y-scroll scrollBar px-8 py-15'>
 
                         {filteredRows.map((row) => (
-                            <a href={row.link} target="_blank" rel="noopener noreferrer">
+                            <a key={row.id} href={row.link} target="_blank" rel="noopener noreferrer">
 
                                 <motion.article
                                     key={row.id}

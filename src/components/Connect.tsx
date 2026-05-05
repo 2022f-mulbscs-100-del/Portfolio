@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { motion } from "framer-motion";
 import SubmitButton from "./buttons/SubmitButton";
 import { FaGithub } from "react-icons/fa6";
@@ -13,83 +13,81 @@ import { IoRocket } from "react-icons/io5";
 
 const Connect = () => {
 
- 
-  const [inputData, setInputData]=useState({
-    yourName:"",
-yourEmail:"",
-subject:"",
-message:""
+
+  const [inputData, setInputData] = useState({
+    yourName: "",
+    yourEmail: "",
+    subject: "",
+    message: ""
   }
 
-    
+
   )
 
-  const onChangeInputHandler = ( event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)=>{
-    const{name,value} =event.target
-   
-// setInputData({...inputData,[event.target.name]:event.target.value})
-   setInputData(prevValue => {
+  const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target
+
+
+    setInputData(prevValue => {
       return {
         ...prevValue,
         [name]: value
       };
     });
   }
-console.log(
-  inputData
-)
 
 
-const handleForm = (e: React.FormEvent<HTMLFormElement>)=>{
-e.preventDefault();
 
-console.log('subbmitted')
-notfiy();
-axios.post(
-  'https://mailer-wine.vercel.app/api/contact',
-  inputData
-)
-.then((Response)=>{
-  console.log(Response)
-})
+  const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-setInputData({
-   yourName:"",
-yourEmail:"",
-subject:"",
-message:""
-});
-}
 
-const notfiy =()=>{
-  toast("Subbmitted!", {
-  position: "top-right",      // or "bottom-right", "top-left", etc.
-  autoClose: 2000,             // duration in ms
-  hideProgressBar: false,
-  closeOnClick: true,
-  pauseOnHover: false,
-  draggable: true,
-  type: "success",             // "info", "success", "warning", "error"
-  theme: "dark",               // "light", "dark", "colored"
-    icon:<IoRocket className="text-[#D3E97A] rotate-270" />
+    notfiy();
+    axios.post(
+      'https://mailer-wine.vercel.app/api/contact',
+      inputData
+    )
+      .then((Response) => {
+        console.log(Response.data)
+      })
 
-});
-}
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLaptop, setIsLaptop] = useState(false);
+    setInputData({
+      yourName: "",
+      yourEmail: "",
+      subject: "",
+      message: ""
+    });
+  }
 
-  useEffect(() => {
-    const handleResize = () => {
-    
+  const notfiy = () => {
+    toast("Subbmitted!", {
+      position: "top-right",      // or "bottom-right", "top-left", etc.
+      autoClose: 2000,             // duration in ms
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      type: "success",             // "info", "success", "warning", "error"
+      theme: "dark",               // "light", "dark", "colored"
+      icon: <IoRocket className="text-[#D3E97A] rotate-270" />
 
-            setIsMobile(window.innerWidth <= 480);
-            setIsLaptop(window.innerWidth >= 1024);
-         
-    };
-    handleResize(); // Run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    });
+  }
+  // const [isMobile, setIsMobile] = useState(false);
+  // const [isLaptop, setIsLaptop] = useState(false);
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+
+
+  //     setIsMobile(window.innerWidth <= 480);
+  //     setIsLaptop(window.innerWidth >= 1024);
+
+  //   };
+  //   handleResize(); // Run on mount
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const leftSectionVariants = {
     hidden: { opacity: 0, x: -80 },
@@ -154,13 +152,13 @@ border-b border-[#484848]
                 transition={{ duration: 1, ease: 'easeInOut' }}
                 className="text-[18px] text-[#C7C7C7] lg:w-[55%]"
               >Say hello at {" "}
-              <Link  href="mailto:zohaib24a@gmail.com?subject=Hello%20Bilal&body=Hi%20Bilal,%20I%20wanted%20to%20connect%20with%20you%20regarding...">
-               <span className="text-white border-b border-[#D3E97A] cursor-pointer">zohaib24a@gmail.com</span>
-              </Link>
-               
-               {" "} For more info, here&rsquo;s my <span className="text-white border-b border-[#D3E97A] cursor-pointer">
-                <a download href="Full_Stack_Dev_Applicant.pdf">Resume</a>
-               </span>
+                <Link href="mailto:zohaib24a@gmail.com?subject=Hello%20Bilal&body=Hi%20Bilal,%20I%20wanted%20to%20connect%20with%20you%20regarding...">
+                  <span className="text-white border-b border-[#D3E97A] cursor-pointer">zohaib24a@gmail.com</span>
+                </Link>
+
+                {" "} For more info, here&rsquo;s my <span className="text-white border-b border-[#D3E97A] cursor-pointer">
+                  <a download href="Full_Stack_Dev_Applicant.pdf">Resume</a>
+                </span>
               </motion.p>
             </div>
 
@@ -192,7 +190,7 @@ border-b border-[#484848]
             </motion.div>
 
           </div>
-          
+
         </motion.div>
 
         <motion.div
@@ -226,7 +224,7 @@ border-b border-[#484848]
               <h1 className="mb-1.5 font-secondary text-[16px] text-[#C7C7C7]">Subject</h1>
               <div className="bg-[#1A1A1A] py-3 px-4 rounded-[4px]">
 
-                <input onChange={onChangeInputHandler} className="w-full outline-0" type="text" name="subject" value={inputData.subject} id=""  required/>
+                <input onChange={onChangeInputHandler} className="w-full outline-0" type="text" name="subject" value={inputData.subject} id="" required />
               </div>
 
             </motion.div>
@@ -245,23 +243,23 @@ border-b border-[#484848]
               lg:justify-start lg:items-start
             sm:justify-center sm:items-center
             ">
-              <SubmitButton 
-              
-              title='Submit'
+              <SubmitButton
+
+                title='Submit'
 
               />
-             
-              <ToastContainer/>
-            
+
+              <ToastContainer />
+
             </motion.div>
-           
-          </motion.form> 
+
+          </motion.form>
 
 
         </motion.div>
 
       </div>
-      
+
     </>
   )
 }

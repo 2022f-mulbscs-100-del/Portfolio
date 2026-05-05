@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 
 type SkillButtonProps = {
@@ -11,20 +11,20 @@ type SkillButtonProps = {
 function SkillButton({ title }: SkillButtonProps) {
 
 
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
   const tiltOptions = [-8, -5, 5, 8];
   const tiltSeed = title.split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
   const tiltAngle = tiltOptions[tiltSeed % tiltOptions.length];
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     // setIsMobile(window.innerWidth < 768);
+  //   };
+  //   handleResize();
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
   return (
 
     <>

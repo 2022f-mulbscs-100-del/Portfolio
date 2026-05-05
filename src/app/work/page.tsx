@@ -3,7 +3,7 @@
 
 import WorkFeaturedProject from '@/Pages/work/WorkFeaturedProject';
 import WorkHeader from '@/Pages/work/WorkHeader';
-import WorkSecondSection from "@/Pages/work/WorkSecondSection";
+// import WorkSecondSection from "@/Pages/work/WorkSecondSection";
 
 const ParallaxSection = () => {
 

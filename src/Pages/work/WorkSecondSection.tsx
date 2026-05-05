@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import { FaArrowLeft } from "react-icons/fa6";
@@ -28,20 +28,20 @@ const WorkSecondSection = () => {
       description: 'This is an Industry standard Mern Stack Project in which we are handling the different properties like commercial and residency perspective user can upload its propery information. And according to its requirement user can make its property buy and sell'
     },
   ];
-  const [isLaptop, setIsLaptop] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isLaptop, setIsLaptop] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-      setIsLaptop(window.innerWidth >= 1024);
-    };
-    handleResize(); // Run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 480);
+  //     setIsLaptop(window.innerWidth >= 1024);
+  //   };
+  //   handleResize(); // Run on mount
+  //   window.addEventListener("resize", handleResize);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   return (
     <>
@@ -69,7 +69,7 @@ const WorkSecondSection = () => {
       {/* work */}
       <div className="w-full border-b border-[#484848]">
 
-        {images.map((img, index) => (
+        {images.map((img) => (
           <React.Fragment key={img.id}>
             <div
 

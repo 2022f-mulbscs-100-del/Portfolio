@@ -2,38 +2,37 @@ import React from 'react'
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import Link from 'next/link';
 
 
-type FeaturedCardProps ={
-    Image:string;
-    buttonTitle:string;
-title:string;
-description:string;
-year:number;
-role:string;
-link:string;
-Company:string;
+type FeaturedCardProps = {
+    Image: string;
+    buttonTitle: string;
+    title: string;
+    description: string;
+    year: number;
+    role: string;
+    link: string;
+    Company: string;
 }
 
-const FeaturedCard = ({ Image, buttonTitle, title, description, year, role,link,Company }:FeaturedCardProps) => {
-    
-      const [isLaptop, setIsLaptop] = useState(false);
-     const [isMobile, setIsMobile] = useState(false);
-    
-     useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-      setIsLaptop(window.innerWidth >= 1024);
-    };
-    handleResize(); // Run on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+const FeaturedCard = ({ Image, buttonTitle, title, description, year, role, link, Company }: FeaturedCardProps) => {
 
-    
-    
+    // const [isLaptop, setIsLaptop] = useState(false);
+    // const [isMobile, setIsMobile] = useState(false);
+
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         setIsMobile(window.innerWidth <= 480);
+    //         setIsLaptop(window.innerWidth >= 1024);
+    //     };
+    //     handleResize(); // Run on mount
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, []);
+
+
+
     return (
 
         <>
@@ -75,7 +74,7 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role,link,
                 {/* rightside */}
 
                 <div className='flex items-center'>
- 
+
                     <div>
 
                         <div>
@@ -83,9 +82,9 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role,link,
                                 transition={{ duration: 1, ease: 'easeInOut' }}
 
                                 className='font-secondary font-bold xsm:text-[26px] lg:text-[32px] leading-tight'>{title}</motion.h1>
-                            <motion.p 
+                            <motion.p
                                 transition={{ duration: 1, ease: 'easeInOut' }}
-                            className=' font-secondary text-[#C7C7C7] 
+                                className=' font-secondary text-[#C7C7C7] 
                             '>{description}</motion.p>
                         </div>
 
@@ -94,7 +93,7 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role,link,
                             <div className='flex items-center border-b border-[#484848] text-[16px] py-4'>
                                 <p>PROJECT INFO</p>
                             </div>
-                             <div className='flex justify-between items-center border-b border-[#484848] py-4 text-end'>
+                            <div className='flex justify-between items-center border-b border-[#484848] py-4 text-end'>
                                 <p>Company</p>
                                 <p className='text-[#C7C7C7]'>{Company}</p>
                             </div>
@@ -116,24 +115,24 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role,link,
 
                         <div className='flex mt-12  gap-6'>
                             <div className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#D3E97A] after:transition-all after:duration-500 hover:after:w-full">
-                         <motion.div
-  className="relative flex cursor-pointer justify-end items-center gap-1 text-[16px] text-[#D3E97A] font-bold font-secondary "
->
-  <Link href={link || "#"} target="_blank">
-  <p> LIVE DEMO
-  </p>
-  </Link >
-  <FaArrowLeft className="rotate-[135deg]" />
-</motion.div>  
+                                <motion.div
+                                    className="relative flex cursor-pointer justify-end items-center gap-1 text-[16px] text-[#D3E97A] font-bold font-secondary "
+                                >
+                                    <Link href={link || "#"} target="_blank">
+                                        <p> LIVE DEMO
+                                        </p>
+                                    </Link >
+                                    <FaArrowLeft className="rotate-[135deg]" />
+                                </motion.div>
 
-</div>
+                            </div>
 
-  <div className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#D3E97A] after:transition-all after:duration-500 hover:after:w-full">
-<div className='flex cursor-pointer justify-end leading-none  text-[16px] text-[#D3E97A] font-bold font-secondary gap-1'> 
-    <Link href="https://github.com/zabi2404"> <p>See on Github</p></Link>
-    <FaGithub />
-    </div>
-    </div>
+                            <div className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#D3E97A] after:transition-all after:duration-500 hover:after:w-full">
+                                <div className='flex cursor-pointer justify-end leading-none  text-[16px] text-[#D3E97A] font-bold font-secondary gap-1'>
+                                    <Link href="https://github.com/zabi2404"> <p>See on Github</p></Link>
+                                    <FaGithub />
+                                </div>
+                            </div>
                         </div>
                     </div>
 
