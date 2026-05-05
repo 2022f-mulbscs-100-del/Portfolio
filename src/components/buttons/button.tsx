@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowRight } from "react-icons/fa6";
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -13,7 +12,6 @@ type ButtonProps = {
 };
 
 const Button = ({ title, text,icon }: ButtonProps) => {
-  const pathname = usePathname();
   const [isMobile, setIsMobile] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
