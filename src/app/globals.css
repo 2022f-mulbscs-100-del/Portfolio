@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme { 
+  --breakpoint-xxsm:0px;
+  --breakpoint-xsm:320px;
+--breakpoint-sm:480px;
+  --breakpoint-md:768px;
+  --breakpoint-lg:1023px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-script: 'Bebas-Neue', cursive;
+  --font-secondary: 'Man-rope';
+  --font-third:'inter'
+   
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: url('../../public/Bebas_Neue/BebasNeue-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Man-rope';
+  src: url('../../public/Manrope/Manrope-VariableFont_wght.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('../../public/Inter/Inter-VariableFont_opsz\,wght.ttf') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0A0A0A;
+  color: white;
+       
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+.appear {
+  animation: appear 10s linear;
+  animation-timeline: view();
+  animation-range: entry 0% 
+  /* cover 60%; */
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.Toastify__progress-bar--success {
+  background-color: #D3E97A !important; /* Tailwind green-500 */
+}
+
+.Toastify__toast-body {
+  font-family: Bebas-Neue; /* example font and color */
+}
+
+.scrollBar{
+  scrollbar-width: none;
+}
+
+@keyframes nodePulse {
+  0% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.08);
+  }
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+@keyframes nodeFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
