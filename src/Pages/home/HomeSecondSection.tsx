@@ -52,22 +52,24 @@ lg:px-[108px] lg:pt-8 lg:text-start
             Image='Images/keeper.png'
             buttonTitle='Clone'
             title='Keeper'
-            description='This is Matremonial App on Which different user can find friends and Life-Partners with zero risk of data. This is totally Mern Project and i am working on it alone. Front end and Backend as well using Next Js, Nest Js and TypeScript'
-            year={2023}
+            description='A Google Keep-inspired note-taking app with a clean Masonry card UI, smooth animations, and a heavily secured backend. Features include JWT refresh token rotation, Google/GitHub OAuth2, MFA with TOTP, email OTP, WebAuthn passkeys, real-time note syncing, reminders, Stripe subscriptions, i18n, Swagger docs, and Docker support.'
+            year={2025}
             role='Mern Stack Developer'
-            link='https://naseebi.com/en'
-            Company="Byteimpulse Technology"
+            link='https://keeper04.netlify.app/'
+            Company="Personal Project"
+            githubLink="https://github.com/2022f-mulbscs-100-del/Keep2"
             />
 
           <FeaturedCard
             Image='Images/relay.jpeg'
-            buttonTitle='Client Work'
+            buttonTitle='Socket.IO'
             title='Relay'
-            description='This project is related to the FareBooking and Flights booking purposes. In this the user can search select its flights with its giving requirement then if confirm then he can book it. Im working on it Front end and Backend as well using Mern Stack'
-            year={2023}
+            description='A full-stack real-time chat application built with React and TypeScript. It includes instant messaging over Socket.IO, JWT-based authentication with secure session handling, a structured REST API backend in Node.js, and a monorepo setup separating frontend and backend concerns.'
+            year={2025}
             role='Mern Stack Developer'
-             link='https://www.faremakers.com/'
-             Company='Byteimpulse Technology'
+             link='https://relay-fc4p.onrender.com/'
+             Company="Personal Project"
+              githubLink="https://github.com/2022f-mulbscs-100-del/Relay-chatApp"
             />
 
           <FeaturedCard
@@ -75,10 +77,11 @@ lg:px-[108px] lg:pt-8 lg:text-start
             buttonTitle='Vibe Coded'
             title='Bye Wind'
             description='This is an Industry standard Mern Stack Project in which we are handling the different properties like commercial and residency perspective user can upload its propery information. And according to its requirement user can make its property buy and sell'
-            year={2022}
+            year={2026}
             role='Mern Stack Developer'
-             link='https://aqarlink-frontend.up.railway.app/'
-             Company="SWATI TECHNOLOGIES"
+            link='#'
+             Company="Personal Project"
+             githubLink="https://github.com/2022f-mulbscs-100-del/Bye-wind"
           />
 
 

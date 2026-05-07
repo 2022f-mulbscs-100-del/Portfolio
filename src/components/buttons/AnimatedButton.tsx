@@ -17,7 +17,6 @@ const AnimatedButton = ({
   title,
   href,
   text,
-  icon,
   className,
   fillClassName,
 }: AnimatedButtonProps) => {

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { FaArrowRight } from 'react-icons/fa6';
 
 type ButtonProps = {
   title: string;
@@ -10,7 +11,7 @@ type ButtonProps = {
   icon?: React.ReactNode;
 };
 
-const Button = ({ title, text,icon }: ButtonProps) => {
+const Button = ({ title, text, icon }: ButtonProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isLaptop, setIsLaptop] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -20,15 +21,16 @@ const Button = ({ title, text,icon }: ButtonProps) => {
       setIsMobile(window.innerWidth <= 480);
       setIsLaptop(window.innerWidth >= 1024);
     };
+
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <motion.div
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
       initial={{ scale: 1 }}
       animate={{
         scale: 1,
@@ -39,37 +41,49 @@ const Button = ({ title, text,icon }: ButtonProps) => {
         duration: 1,
         ease: 'easeInOut',
       }}
-      className={`bg-[#D3E97A] flex justify-center cursor-pointer items-center rounded-[100px]   
-                 xsm:w-[163px] min-h-[48px] xsm:px-4 xsm:py-[5px]`}
+      className="bg-[#D3E97A] flex justify-center items-center rounded-[100px] overflow-hidden"
     >
-      <motion.button
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-        className={`cursor-pointer text-black font-secondary font-bold flex items-center xsm:gap-2 md:gap-4 text-nowrap lg:text-[16px] ${text && text}`}
+      <Link
+        href="/contact"
+        className="w-full h-full"
       >
-        <Link href='/contact'>{title}</Link>
-
-        <motion.div
-          animate={{
-            width: isHovered ? 35 : (!isLaptop ? 35 : 10),
-            height: isHovered ? 35 : (!isLaptop ? 35 : 10),
-          }}
-          transition={{
-            duration: 1,
-            ease: 'easeInOut',
-          }}
-          className="bg-black rounded-full flex justify-center items-center"
+        <motion.button
+          type="button"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className={`w-full h-full cursor-pointer text-black font-secondary font-bold flex justify-center items-center xsm:gap-2 md:gap-4 text-nowrap lg:text-[16px] ${text || ''
+            }`}
         >
-          <motion.div
-            animate={{ scale: isHovered ? 1 : (!isLaptop ? 1 : 0) }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
-          >
-            {icon}
-            {/* <FaArrowRight className='text-white rotate-320' /> */}
-          </motion.div>
-        </motion.div>
+          {title}
 
-      </motion.button>
+          <motion.div
+            animate={{
+              width: isHovered ? 35 : !isLaptop ? 35 : 10,
+              height: isHovered ? 35 : !isLaptop ? 35 : 10,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: 'easeInOut',
+            }}
+            className="bg-black rounded-full flex justify-center items-center"
+          >
+            <motion.div
+              animate={{
+                scale: isHovered ? 1 : !isLaptop ? 1 : 0,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
+              }}
+              className="flex justify-center items-center"
+            >
+              {icon || (
+                <FaArrowRight className="text-white w-[18px] h-[18px] rotate-[-40deg]" />
+              )}
+            </motion.div>
+          </motion.div>
+        </motion.button>
+      </Link>
     </motion.div>
   );
 };

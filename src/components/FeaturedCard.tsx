@@ -14,9 +14,21 @@ type FeaturedCardProps = {
     role: string;
     link: string;
     Company: string;
+    githubLink: string;
 }
 
-const FeaturedCard = ({ Image, buttonTitle, title, description, year, role, link, Company }: FeaturedCardProps) => {
+const FeaturedCard = ({ Image, buttonTitle, title, description, year, role, link, Company ,githubLink}: FeaturedCardProps) => {
+    const resolveExternalHref = (value: string) => {
+        if (!value || value === '#') {
+            return '#';
+        }
+
+        if (value.startsWith('http://') || value.startsWith('https://')) {
+            return value;
+        }
+
+        return `https://${value}`;
+    };
 
     // const [isLaptop, setIsLaptop] = useState(false);
     // const [isMobile, setIsMobile] = useState(false);
@@ -118,7 +130,7 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role, link
                                 <motion.div
                                     className="relative flex cursor-pointer justify-end items-center gap-1 text-[16px] text-[#D3E97A] font-bold font-secondary "
                                 >
-                                    <Link href={link || "#"} target="_blank">
+                                        <Link href={resolveExternalHref(link)} target="_blank" rel="noopener noreferrer">
                                         <p> LIVE DEMO
                                         </p>
                                     </Link >
@@ -129,7 +141,7 @@ const FeaturedCard = ({ Image, buttonTitle, title, description, year, role, link
 
                             <div className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-[#D3E97A] after:transition-all after:duration-500 hover:after:w-full">
                                 <div className='flex cursor-pointer justify-end leading-none  text-[16px] text-[#D3E97A] font-bold font-secondary gap-1'>
-                                    <Link href="https://github.com/zabi2404"> <p>See on Github</p></Link>
+                                        <Link href={resolveExternalHref(githubLink)} target='_blank' rel="noopener noreferrer"> <p>See on Github</p></Link>
                                     <FaGithub />
                                 </div>
                             </div>
