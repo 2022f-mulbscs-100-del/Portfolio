@@ -109,8 +109,9 @@ const Header = () => {
 
                 <motion.div initial={"hidden"} whileInView="show" viewport={{ once: false, amount: 0.25 }} variants={formItemVariants} className="inline-block sm:text-start leading-none lg:h-[50px]
                lg:w-[600px]  
+               w-full
                sm:h-[60px]
-               xsm:w-[300px] 
+           
           
               " >
 
@@ -129,11 +130,12 @@ const Header = () => {
 
                   className="text-[#C7C7C7] md:text-[18px] font-secondary
         
-        xsm:text-[16px]
+        xsm:text-[16px] sm:text-center min-[1250px]:text-start
         ">
                   I am a Full Stack Developer specializing in the MERN stack (MongoDB, Express.js, React.js, and Node.js), with strong expertise in Next.js, TypeScript, and modern JavaScript libraries.
 
                 </motion.p>
+                
               </div>
 
             </div>

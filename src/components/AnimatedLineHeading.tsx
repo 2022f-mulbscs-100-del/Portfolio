@@ -39,26 +39,26 @@ const AnimatedLineHeading = () => {
     const runSequence = async () => {
       if (isCancelled) return;
 
-      const hasSecond = !!words[currentIndex];
+      // const hasSecond = !!words[currentIndex];
 
       setShowFirst(true);
       // setShowSecond(false);
       await wait(3000);
       if (isCancelled) return;
 
-      if (hasSecond) {
-        // setShowSecond(true);
-        await wait(3000);
-        if (isCancelled) return;
+      // if (hasSecond) {
+      //   // setShowSecond(true);
+      //   await wait(3000);
+      //   if (isCancelled) return;
 
-        // setShowSecond(false);
-        await wait(3000);
-        if (isCancelled) return;
-      }
+      //   // setShowSecond(false);
+      //   await wait(3000);
+      //   if (isCancelled) return;
+      // }
 
-      setShowFirst(false);
-      await wait(3000);
-      if (isCancelled) return;
+      // setShowFirst(false);
+      // await wait(3000);
+      // if (isCancelled) return;
 
       setCurrentIndex((prev) => (prev + 1) % words.length);
       setRenderKey((prev) => prev + 1);
@@ -73,27 +73,81 @@ const AnimatedLineHeading = () => {
   }, [currentIndex]);
  
 
-  const isXSM = windowWidth <= 480;
+  // const isXSM = windowWidth <= 480;
   // const isSM = windowWidth > 480 && windowWidth < 1024;
-  const isLG = windowWidth >= 1024;
-  const isIntroLine = words[currentIndex].first === 'hi, i am zohaib';
+  // const isLG = windowWidth >= 1024;
+  // const isIntroLine = words[currentIndex].first === 'hi, i am zohaib';
 
  
-  if (isXSM || isLG) {
+  // if (isXSM || isLG) {
+  // return (
+  //   <div
+  //     className="h-[50px] flex lg:flex-col justify-center overflow-hidden 
+  //       lg:gap-y-10 lg:w-[700px] 
+  //      xsm:w-full xsm:gap-y-2  xsm:flex-col
+  //       sm:flex-row sm:gap-x-[] sm:w-[390px] 
+  //       xsm:items-center
+        
+  //       "
+        
+  //   >
+  //     {/* First Line */}
+  //     <div className={`h-[50px] flex items-center xsm:pl-[100px]  lg:min-w-[350px] '} 
+  //     xsm:w-full`}>
+  //       <AnimatePresence mode="wait">
+  //         {showFirst && (
+  //           <motion.div
+  //             key={`first-${renderKey}`}
+  //             initial={{ width: 0 }}
+  //             animate={{ width: '100%' }}
+  //             exit={{ width: 0 }}
+  //             transition={{ duration: 3, ease: 'easeInOut' }}
+  //             className="font-script whitespace-nowrap overflow-hidden lg:text-[40px] xsm:text-[30px]"
+  //           >
+  //             {words[currentIndex].first}
+  //           </motion.div>
+  //         )}
+  //       </AnimatePresence>
+  //     </div>
+
+  //     {/* Second Line */}
+  //     {/* <div className="h-[50px] flex items-center 
+  //     xsm:w-[280px]
+  //     sm:max-w-[280px] lg:min-w-[600px]  ">
+  //       <AnimatePresence mode="wait">
+  //         {showSecond && words[currentIndex].second && (
+  //           <motion.div
+  //             key={`second-${renderKey}`}
+  //             initial={{ width: 0 }}
+  //             animate={{ width: '100%' }}
+  //             exit={{ width: 0 }}
+  //             transition={{ duration: 3, ease: 'easeInOut' }}
+  //             className="font-script whitespace-nowrap overflow-hidden lg:text-[101px] xsm:text-[50px]"
+  //           >
+  //             {words[currentIndex].second}
+  //           </motion.div>
+  //         )}
+  //       </AnimatePresence>
+  //     </div> */}
+  //   </div>
+  //       )
+
+  // }
+ 
+
   return (
-    <div
+      <div
       className="h-[50px] flex lg:flex-col justify-center overflow-hidden 
         lg:gap-y-10 lg:w-[700px] 
-       xsm:w-[300px] xsm:gap-y-2  xsm:flex-col
-        sm:flex-row sm:gap-x-[] sm:w-[390px] 
-        
+       xsm:w-full xsm:gap-y-2  xsm:flex-col
+        sm:flex-row sm:gap-x-[] sm:w-[590px]
+        xsm:items-center
+        lg:max-w-[390px]
         "
-        
     >
       {/* First Line */}
-      <div className={`h-[50px] flex items-center ${isIntroLine ? 'lg:min-w-[480px]' : 'lg:min-w-[350px]'} 
-      sm:max-w-[240px] 
-      xsm:w-[230px]`}>
+      <div className={`h-[50px] flex items-center  xsm:pl-[10px] sm:pl-[100px] md:pl-[300px] lg:pl-0  lg:min-w-[350px] '} 
+      xsm:w-full`}>
         <AnimatePresence mode="wait">
           {showFirst && (
             <motion.div
@@ -110,46 +164,22 @@ const AnimatedLineHeading = () => {
         </AnimatePresence>
       </div>
 
-      {/* Second Line */}
-      {/* <div className="h-[50px] flex items-center 
-      xsm:w-[280px]
-      sm:max-w-[280px] lg:min-w-[600px]  ">
-        <AnimatePresence mode="wait">
-          {showSecond && words[currentIndex].second && (
-            <motion.div
-              key={`second-${renderKey}`}
-              initial={{ width: 0 }}
-              animate={{ width: '100%' }}
-              exit={{ width: 0 }}
-              transition={{ duration: 3, ease: 'easeInOut' }}
-              className="font-script whitespace-nowrap overflow-hidden lg:text-[101px] xsm:text-[50px]"
-            >
-              {words[currentIndex].second}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div> */}
-    </div>
-        )
 
-  }
- 
-
-  return (
-    <div className="h-[50px] flex items-center sm:w-[390px] overflow-hidden">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`single-${renderKey}`}
-          initial={{ width: 0 }}
-          animate={{ width: 'auto' }}
-          exit={{ width: 0 }}
-          transition={{ duration: 3, ease: 'easeInOut' }}
-          className="font-script whitespace-nowrap overflow-hidden text-[40px]"
-        >
-          {/* {wordsSingleLine[currentIndex].line} */}
-        </motion.div>
-      </AnimatePresence>
     </div>
+    // <div className="h-[50px] flex items-center sm:w-[390px] overflow-hidden">
+    //   <AnimatePresence mode="wait">
+    //     <motion.div
+    //       key={`single-${renderKey}`}
+    //       initial={{ width: 0 }}
+    //       animate={{ width: 'auto' }}
+    //       exit={{ width: 0 }}
+    //       transition={{ duration: 3, ease: 'easeInOut' }}
+    //       className="font-script whitespace-nowrap overflow-hidden text-[40px]"
+    //     >
+    //       {/* {wordsSingleLine[currentIndex].line} */}
+    //     </motion.div>
+    //   </AnimatePresence>
+    // </div>
   );
 
 
