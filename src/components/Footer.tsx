@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import AnimatedButton from '@/components/buttons/AnimatedButton';
 
 const Footer = () => {
     const pathname = usePathname();
@@ -34,13 +35,11 @@ const Footer = () => {
                             <span className="text-[#D3E97A]">great together.</span>
                         </h2>
                     </div>
-                    <a
+                    <AnimatedButton
+                        title="Get in touch"
                         href="mailto:zohaib24a@gmail.com"
-                        className="inline-flex items-center gap-3 bg-[#D3E97A] text-black font-semibold text-sm px-6 py-3 rounded-full hover:bg-white transition-colors duration-300 w-fit"
-                    >
-                        Get in touch
-                        <span className="text-lg">→</span>
-                    </a>
+                        text="xsm:text-[12px]"
+                    />
                 </div>
             </div>
 
