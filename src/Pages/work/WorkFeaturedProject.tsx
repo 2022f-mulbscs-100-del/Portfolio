@@ -142,8 +142,8 @@ function WorkFeaturedProject() {
                     <div className="mt-4 flex flex-wrap gap-2.5 pb-4 md:mt-5 md:gap-3">
                         {[
                             { key: "ALL", label: "All" },
-                            { key: "FULL STACK", label: "Full Stack" },
-                            { key: "CLONE", label: "Clone" },
+                            { key: "full stack", label: "Full Stack" },
+                            { key: "Clone", label: "Clone" },
                             { key: "AUTOMATION", label: "Automation" },
                             { key: "MOBILE", label: "Mobile" },
                         ].map((f) => (

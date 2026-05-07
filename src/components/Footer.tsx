@@ -16,7 +16,7 @@ const Footer = () => {
         { label: 'Home', href: '/' },
         { label: 'Projects', href: '/work' },
         // { label: 'Workflows', href: '/workflows' },
-        { label: 'MCP Servers', href: '/mcp-servers' },
+        // { label: 'MCP Servers', href: '/mcp-servers' },
         { label: 'About', href: '/about' },
         { label: 'Skills', href: '/skills' },
         { label: 'Contact', href: '/contact' },
@@ -54,10 +54,8 @@ const Footer = () => {
                     </p>
                     <div className="flex items-center gap-5">
                         {[
-                            { icon: <FaLinkedinIn />, href: 'https://linkedin.com' },
-                            { icon: <FaGithub />, href: 'https://github.com/zabi2404' },
-                            { icon: <FaXTwitter />, href: '' },
-                            { icon: <FaInstagram />, href: '' },
+                            { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/zohaib-ali-239468392/' },
+                            { icon: <FaGithub />, href: 'https://github.com/2022f-mulbscs-100-del' },
                         ].map((social, i) => (
                             <Link
                                 key={i}

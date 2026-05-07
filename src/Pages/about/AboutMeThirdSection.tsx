@@ -127,7 +127,7 @@ Webbuggs
                 transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#C7C7C7] font-secondary xsm:text-[17px] lg:text-[18px]'>
-Aug 2025 — Present
+Aug 2025 - May 2026
          </motion.p>
 
 
@@ -141,7 +141,7 @@ Aug 2025 — Present
 
             className='text-[#C7C7C7] xsm:text-[17px] lg:text-[18px] leading-[1.7]'>
 
-           Currently working as a MERN Stack Developer, building scalable web applications with React.js, Next.js, Node.js, Express.js, MongoDB, and MySQL.
+           Worked as a MERN Stack Developer contributing to multiple real-world projects in different capacities — as a frontend developer and as a full-stack developer. Contributed to projects including PSX and Invoice Generator web applications, built and maintained features using React, Node.js, Express, and MongoDB, with focus on clean UI and functional backend integration.
            </motion.p>
 
         </motion.div>
@@ -169,7 +169,7 @@ xsm:pb-3 xsm:flex-col xsm:justify-start
                transition={{ duration: 1, ease: 'easeInOut' }}
               className='font-secondary xsm:text-[26px] lg:text-[32px]'
           >
-        MERN Stack Intern
+        Front-End Intern
           </motion.h1>
            <motion.p
              variants={formItemVariants}
@@ -191,7 +191,7 @@ Meta Melon
              transition={{ duration: 1, ease: 'easeInOut' }}
 
                 className='text-[#C7C7C7] font-secondary xsm:text-[17px] lg:text-[18px]'>
-             Jun 2025 - Jul 2025 (2 months)
+             May 2025 - Jul 2025
          </motion.p>
 
 
@@ -205,10 +205,11 @@ Meta Melon
 
             className='text-[#C7C7C7] xsm:text-[17px] lg:text-[18px] leading-[1.7]'>
 
-Completed a 2-month internship, contributing to MERN stack projects and assisting in frontend and backend feature development.
-</motion.p>
+Worked as a Front-End Intern contributing to multiple real-world projects including a dynamic dashboard and portfolio website. Focused on building reusable React components, integrating APIs, optimizing UI responsiveness with Tailwind CSS, and enhancing user experience with animations using Framer Motion.
+          </motion.p>
 
-          </motion.div>
+        </motion.div>
+
       </motion.div>
     </div>
  </>

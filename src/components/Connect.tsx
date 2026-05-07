@@ -183,7 +183,7 @@ border-b border-[#484848]
                 transition={{ duration: 1, ease: 'easeInOut' }}
                 className="text-[18px] text-[#C7C7C7] lg:w-[55%]"
               >Say hello at {" "}
-                <Link href="mailto:zohaib24a@gmail.com?subject=Hello%20Bilal&body=Hi%20Bilal,%20I%20wanted%20to%20connect%20with%20you%20regarding...">
+                <Link href="mailto:zohaib24a@gmail.com?subject=Hello%20Zohaib&body=Hi%20Zohaib,%20I%20wanted%20to%20connect%20with%20you%20regarding...">
                   <span className="text-white border-b border-[#D3E97A] cursor-pointer">zohaib24a@gmail.com</span>
                 </Link>
 
@@ -205,19 +205,13 @@ border-b border-[#484848]
             ">
               {/* Open the new tab, but don’t give it access to my page
               This visitor came from xyz.com */}
-              <Link href="https://www.linkedin.com/in/bilal-bhatti-462668248/">
-                <FaLinkedinIn className="w-[30px] h-[30px] cursor-pointer" />
-              </Link>
               <Link href='https://github.com/zabi2404' target="_blank" rel="noopener noreferrer">
                 <FaGithub className="w-[30px] h-[30px] cursor-pointer" />
               </Link >
-              <Link href='https://twitter.com/zabi2404' target="_blank" rel="noopener noreferrer">
-                <FaXTwitter className="w-[30px] h-[30px] cursor-pointer" />
+              <Link href="https://www.linkedin.com/in/bilal-bhatti-462668248/">
+                <FaLinkedinIn className="w-[30px] h-[30px] cursor-pointer" />
               </Link>
-              <Link href='https://instagram.com/zabi2404' target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="w-[30px] h-[30px] cursor-pointer" />
-              </Link>
-
+              
 
 
             </motion.div>
