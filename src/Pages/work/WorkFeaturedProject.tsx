@@ -16,10 +16,10 @@ const rows: ProjectRow[] = [
     {
         id: "00",
         title: "Keeper",
-        stack: ["React", "TypeScript", "Node.js", "Express", "MySQL", "Redis", "Docker"],
+        stack: ["React", "TypeScript", "Node.js", "Express", "MySQL", "websocket","Redis", "Docker"],
         type: "Clone",
-        year: "2023",
-        link: "https://zabi2404.github.io/Tindog2.0/"
+        year: "2025",
+        link: "https://keeper04.netlify.app/"
     },
     {
         id: "01",
@@ -35,10 +35,18 @@ const rows: ProjectRow[] = [
         stack: ["React", "Node.js", "Express", "Prisma"],
         type: "Vibe Coded",
         year: "2025",
-        link: ""
+        link: "https://github.com/2022f-mulbscs-100-del/Bye-wind"
     },
     {
         id: "03",
+        title: "Gsap Landing Page",
+        stack: ["React", "GSAP","tailwind"],
+        type: "Static",
+        year: "2026",
+        link: "https://gsap00.netlify.app/"
+    },
+    {
+        id: "04",
         title: "Real Estate",
         stack: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
         type: "full stack",
@@ -46,7 +54,7 @@ const rows: ProjectRow[] = [
         link: "https://real-estate-mern02.netlify.app/"
     },
     {
-        id: "04",
+        id: "05",
         title: "HRM",
         stack: ["React", "Node.js", "Express", "MongoDB"],
         type: "full stack",
@@ -54,15 +62,15 @@ const rows: ProjectRow[] = [
         link: ""
     },
     {
-        id: "05",
+        id: "06",
         title: "Dashdark X",
-        stack: ["React", "TypeScript"],
+        stack: ["React", "TypeScript","Tailwind"],
         type: "Static",
         year: "2025",
         link: "https://dashdark-x.netlify.app/user"
     },
     {
-        id: "06",
+        id: "07",
         title: "Esyasoft",
         stack: ["React", "CSS"],
         type: "Static",
@@ -70,7 +78,7 @@ const rows: ProjectRow[] = [
         link: "https://esyasoft.netlify.app/"
     },
     {
-        id: "07",
+        id: "08",
         title: "Tindog",
         stack: ["HTML", "CSS", "Bootstrap"],
         type: "Static",
@@ -78,21 +86,21 @@ const rows: ProjectRow[] = [
         link: "https://zabi2404.github.io/Tindog2.0/"
     },
     {
-        id: "08",
+        id: "09",
         title: "Recurrly",
         stack: ["React_Native", "Expo", "NativeWind"],
         type: "MOBILE",
         year: "2025",
-        link: "https://zabi2404.github.io/Tindog2.0/"
+        link: "https://github.com/2022f-mulbscs-100-del/Recurrly"
     },
-    {
-        id: "09",
-        title: "N8N Ai Assistant Workflow",
-        stack: ["React_Native", "Expo", "NativeWind"],
-        type: "AUTOMATION",
-        year: "2025",
-        link: "https://zabi2404.github.io/Tindog2.0/"
-    },
+    // {
+    //     id: "10",
+    //     title: "N8N Ai Assistant Workflow",
+    //     stack: ["React_Native", "Expo", "NativeWind"],
+    //     type: "AUTOMATION",
+    //     year: "2025",
+    //     link: ""
+    // },
 
 ];
 
