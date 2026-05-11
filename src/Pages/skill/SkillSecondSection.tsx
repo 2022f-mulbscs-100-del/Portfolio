@@ -92,7 +92,7 @@ xsm:px-2 xsm:gap-4 '>
               transition={{ duration: 1, ease: 'easeInOut' }}
 
               className=' text-[#C7C7C7] font-secondary '>
-              I am always looking to add more skills.Morbi egestas neque eu blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at purus faucibus tristique ut et dolor.
+              Full-stack developer building scalable web applications with the MERN stack and TypeScript-first technologies. Proficient in React, Next.js, Node.js, Express, and databases including MongoDB, PostgreSQL, MySQL, and Redis. Experienced in developing real-time applications, RESTful and GraphQL APIs, and implementing secure authentication systems. Comfortable with Docker containerization and MCP (Model Context Protocol) for AI-powered integrations.
             </motion.p>
           </div>
 

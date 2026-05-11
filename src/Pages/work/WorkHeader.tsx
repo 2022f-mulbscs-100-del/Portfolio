@@ -115,7 +115,7 @@ xsm:px-4 xsm:gap-4
 
                 className='text-[#C7C7C7] xsm:text-[17px] lg:text-[18px] leading-[1.7]'>
 
-                I have  3 years of experience as a Full Stack Developer, working extensively with the MERN stack. I’ve built scalable and performance-driven web applications using React.js, Next.js, Node.js, and Express.js, along with MongoDB and MySQL. I’ve also developed mobile app backends for React Native, focusing on efficient API design and seamless integration. My work involved close collaboration with cross-functional teams to deliver high-quality, user-focused solutions.</motion.p>
+                I build high-performance, full-stack web applications with a strong focus on user experience and code quality. Specialized in the MERN stack, I create everything from responsive frontends to robust backends. My projects showcase real-time features, secure authentication, scalable APIs, and modern deployment practices. Passionate about solving complex problems and delivering solutions that make a difference.</motion.p>
 
             </div>
 
