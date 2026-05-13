@@ -25,7 +25,7 @@ const WorkSecondSection = () => {
       src: "Images/aquarlink.png",
       title: "AqarLink",
       link: 'https://aqarlink-frontend.up.railway.app/',
-      description: 'This is an Industry standard Mern Stack Project in which we are handling the different properties like commercial and residency perspective user can upload its propery information. And according to its requirement user can make its property buy and sell'
+      description: 'A multi-role restaurant app built with VibeCoding. Features Customer, Admin, and SuperAdmin roles with comprehensive restaurant management, menu ordering, order tracking, and administrative controls for seamless dining operations.'
     },
   ];
   // const [isLaptop, setIsLaptop] = useState(false);

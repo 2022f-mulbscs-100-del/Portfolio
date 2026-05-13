@@ -76,7 +76,7 @@ lg:px-[108px] lg:pt-8 lg:text-start
             Image='Images/byeWind.jpeg'
             buttonTitle='Vibe Coded'
             title='Bye Wind'
-            description='This is an Industry standard Mern Stack Project in which we are handling the different properties like commercial and residency perspective user can upload its propery information. And according to its requirement user can make its property buy and sell'
+            description='A multi-role restaurant app built with VibeCoding. Features Customer, Admin, and SuperAdmin roles with comprehensive restaurant management, menu ordering, order tracking, and administrative controls for seamless dining operations.'
             year={2026}
             role='Mern Stack Developer'
             link='#'
