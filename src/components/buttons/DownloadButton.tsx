@@ -1,95 +1,89 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
 import { FiDownload } from "react-icons/fi";
 
 type ButtonProps = {
   title: string;
   text?: string;
-  link?: string;
 };
 
 const DownloadButton = ({ title, text }: ButtonProps) => {
-  const pathname = usePathname();
-  const [isMobile, setIsMobile] = useState(false);
-  const [isLaptop, setIsLaptop] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480);
-      setIsLaptop(window.innerWidth >= 1024);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const button = buttonRef.current;
-    const mouseHover = () => setIsHovered(true);
-    const mouseLeave = () => setIsHovered(false);
-
-    if (button) {
-      button.addEventListener('mouseenter', mouseHover);
-      button.addEventListener('mouseleave', mouseLeave);
-    }
-
-    return () => {
-      if (button) {
-        button.removeEventListener('mouseenter', mouseHover);
-        button.removeEventListener('mouseleave', mouseLeave);
-      }
-    };
-  }, []);
 
   return (
     <motion.div
       initial={{ scale: 1 }}
-      animate={{
-        scale: 1,
-        width: isMobile ? 163 : 187,
-        height: isMobile ? 48 : 54,
-      }}
+      animate={{ scale: 1 }}
       transition={{
-        duration: 1,
+        duration: 0.3,
         ease: 'easeInOut',
       }}
-      className={`bg-[#D3E97A] flex justify-center items-center rounded-[100px]   
-                 xsm:w-[163px] min-h-[48px] xsm:px-4 xsm:py-[5px]`}
+      className="
+        bg-[#D3E97A]
+        flex
+        justify-center
+        items-center
+        rounded-[100px]
+        overflow-hidden
+        w-[163px]
+        h-[48px]
+        md:w-[187px]
+        md:h-[54px]
+      "
     >
-      <button
-        ref={buttonRef}
-        className={`cursor-pointer text-black font-secondary font-bold flex items-center xsm:gap-2 text-nowrap lg:text-[16px] ${text && text}`}
+      <motion.button
+        type="button"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`
+          w-full
+          h-full
+          cursor-pointer
+          text-black
+          font-secondary
+          font-bold
+          flex
+          justify-center
+          items-center
+          xsm:gap-2
+          md:gap-2
+          text-nowrap
+          lg:text-[16px]
+          ${text || ''}
+        `}
+        download
+        href="Full_Stack_Dev_Applicant.pdf"
+        as="a"
       >
-        <a download href="Full_Stack_Dev_Applicant.pdf">
-          {title}
-        </a>
+        {title}
 
         <motion.div
           animate={{
-            width: isHovered ? 35 : (!isLaptop ? 35 : 10),
-            height: isHovered ? 35 : (!isLaptop ? 35 : 10),
+            width: isHovered ? 35 : 10,
+            height: isHovered ? 35 : 10,
           }}
           transition={{
-            duration: 1,
+            duration: 0.3,
             ease: 'easeInOut',
           }}
           className="bg-black rounded-full flex justify-center items-center"
         >
           <motion.div
-            animate={{ scale: isHovered ? 1 : (!isLaptop ? 1 : 0) }}
-            transition={{ duration: 0.6, ease: 'easeInOut' }}
+            animate={{
+              scale: isHovered ? 1 : 0,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: 'easeInOut',
+            }}
+            className="flex justify-center items-center"
           >
-            {pathname === '/about' && (
-              <FiDownload className='text-white h-[20px] w-[20px]' />
-            )}
+            <FiDownload className="text-white w-[18px] h-[18px]" />
           </motion.div>
         </motion.div>
-      </button>
+      </motion.button>
     </motion.div>
   );
 };
