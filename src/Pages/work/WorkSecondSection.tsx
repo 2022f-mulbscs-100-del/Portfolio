@@ -9,16 +9,16 @@ const WorkSecondSection = () => {
     {
       id: 1,
       src: "Images/naseebi.png",
-      title: "Naaseebi",
-      link: 'https://naseebi.com/en',
-      description: 'This is Matremonial App on Which different user can find friends and Life-Partners with zero risk of data. This is totally Mern Project and i am working on it alone. Front end and Backend as well using Next Js, Nest Js and TypeScript'
+      title: "Keeper",
+      link: 'https://keeper04.netlify.app/',
+      description: 'A full-stack matrimonial application clone built with MERN Stack and WebSocket. Features include real-time chat using WebSockets, MySQL database with Redis caching, Docker containerization, and comprehensive user authentication. A clone project showcasing advanced backend architecture and real-time communication.'
     },
     {
       id: 2,
       src: "Images/faremakers.png",
-      title: "Faremakers",
-      link: 'https://www.faremakers.com/',
-      description: 'This project is related to the FareBooking and Flights booking purposes. In this the user can search select its flights with its giving requirement then if confirm then he can book it. Im working on it Front end and Backend as well using Mern Stack'
+      title: "Relay",
+      link: 'https://relay-fc4p.onrender.com/',
+      description: 'A full-stack real-time chat application built with React and Node.js. Features include instant messaging over WebSocket, JWT-based authentication with secure session handling, a structured REST API backend, and a monorepo setup separating frontend and backend concerns.'
     },
     {
       id: 3,
@@ -116,7 +116,7 @@ const WorkSecondSection = () => {
                   </div>
                 </div>
                 <div className="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-4] after:h-[2px] after:w-0 after:bg-[#D3E97A] after:transition-all after:duration-500 hover:after:w-full">
-                  <div className='flex justify-end leading-none cursor-pointer   text-[16px] text-[#D3E97A] font-bold font-secondary gap-1'> <Link href='https://github.com/zabi2404'><p className='text-nowrap'>See on Github</p></Link><FaGithub /></div>
+                  <div className='flex justify-end leading-none cursor-pointer   text-[16px] text-[#D3E97A] font-bold font-secondary gap-1'> <Link target="_blank" rel="noopener noreferrer" href='https://github.com/zabi2404'><p className='text-nowrap'>See on Github</p></Link><FaGithub /></div>
                 </div>
               </div>
             </div>

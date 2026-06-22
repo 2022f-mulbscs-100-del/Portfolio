@@ -55,7 +55,7 @@ const Footer = () => {
                     <div className="flex items-center gap-5">
                         {[
                             { icon: <FaLinkedinIn />, href: 'https://www.linkedin.com/in/zohaib-ali-239468392/' },
-                            { icon: <FaGithub />, href: 'https://github.com/2022f-mulbscs-100-del' },
+                            { icon: <FaGithub />, href: 'https://github.com/zabi2404' },
                         ].map((social, i) => (
                             <Link
                                 key={i}
