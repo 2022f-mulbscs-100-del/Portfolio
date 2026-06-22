@@ -77,7 +77,7 @@ lg:px-[108px] lg:pt-8 lg:text-start
             buttonTitle='Vibe Coded'
             title='Bye Wind'
             description='A multi-role restaurant app built with VibeCoding. Features Customer, Admin, and SuperAdmin roles with comprehensive restaurant management, menu ordering, order tracking, and administrative controls for seamless dining operations.'
-            year={2026}
+            year={2025}
             role='Mern Stack Developer'
             link='#'
              Company="Personal Project"

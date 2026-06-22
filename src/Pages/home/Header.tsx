@@ -150,11 +150,11 @@ const Header = () => {
 
               /></div>
               <div className="flex gap-4">
-                <Link className='hover:-translate-y-1 shadow-2xl  border border-transparent hover:border-[#D3E97A] w-fit h-fit rounded-full duration-300 transition-all' href=''>
+                <Link target="_blank" rel="noopener noreferrer" className='hover:-translate-y-1 shadow-2xl  border border-transparent hover:border-[#D3E97A] w-fit h-fit rounded-full duration-300 transition-all' href='https://www.linkedin.com/in/zohaib-ali-239468392/'>
                   <img src="/Images/linkedin_icon.svg" alt="linkedin" />
                   </Link>
 
-                <Link  className='hover:-translate-y-1 shadow-2xl  border border-transparent hover:border-[#D3E97A] w-fit h-fit rounded-full duration-300 transition-all' href='https://github.com/zabi2404'> 
+                <Link target="_blank" rel="noopener noreferrer" className='hover:-translate-y-1 shadow-2xl  border border-transparent hover:border-[#D3E97A] w-fit h-fit rounded-full duration-300 transition-all' href='https://github.com/zabi2404'> 
                 <img src="/Images/github_icon.svg" alt="github" />
                 </Link>
               </div>

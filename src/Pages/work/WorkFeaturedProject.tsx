@@ -91,7 +91,7 @@ const rows: ProjectRow[] = [
         stack: ["React_Native", "Expo", "NativeWind"],
         type: "MOBILE",
         year: "2025",
-        link: "https://github.com/2022f-mulbscs-100-del/Recurrly"
+        link: "https://github.com/zabi2404/Recurrly"
     },
     // {
     //     id: "10",

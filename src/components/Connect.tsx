@@ -208,7 +208,7 @@ border-b border-[#484848]
               <Link href='https://github.com/zabi2404' target="_blank" rel="noopener noreferrer">
                 <FaGithub className="w-[30px] h-[30px] cursor-pointer" />
               </Link >
-              <Link href="https://www.linkedin.com/in/bilal-bhatti-462668248/">
+              <Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zohaib-ali-239468392/">
                 <FaLinkedinIn className="w-[30px] h-[30px] cursor-pointer" />
               </Link>
               
