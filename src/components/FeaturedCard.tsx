@@ -151,7 +151,7 @@ const FeaturedCard = ({ Image, projectType, highlights, title, description, link
               onMouseLeave={() => setIsDemoHovered(false)}
               onFocus={() => setIsDemoHovered(true)}
               onBlur={() => setIsDemoHovered(false)}
-              className="group/action order-1 inline-flex h-12 w-[163px] items-center justify-center gap-2 rounded-full bg-[#D3E97A] text-sm font-bold text-[#0A0A0A] transition duration-200 hover:-translate-y-0.5 hover:bg-[#e2f59a] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D3E97A] md:h-[54px] md:w-[187px] md:gap-4 md:text-base"
+              className="group/action order-1 inline-flex h-12 w-[163px] items-center justify-center gap-2 rounded-full bg-[#D3E97A] text-sm font-bold text-[#0A0A0A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#D3E97A] md:h-[54px] md:w-[187px] md:gap-4 md:text-base"
             >
               Live demo
               <motion.span
