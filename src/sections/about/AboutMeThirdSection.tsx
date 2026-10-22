@@ -60,14 +60,14 @@ sm:text-center
 <motion.div
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.25 }}
+  viewport={{ once: false, amount: 0.25 }}
   variants={leftSectionVariants}
 >
  <motion.h1
           variants={formItemVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ once: false, amount: 0.25 }}
            transition={{ duration: 1, ease: 'easeInOut' }}
           className='font-script leading-tight xsm:text-[58px] lg:text-[72px]'>
          My Experience
@@ -77,7 +77,7 @@ sm:text-center
 <motion.div
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.25 }}
+  viewport={{ once: false, amount: 0.25 }}
   variants={rightSectionVariants}
 >
 
@@ -85,7 +85,7 @@ sm:text-center
   variants={formItemVariants}
   initial="hidden"
   whileInView="show"
-  viewport={{ once: true, amount: 0.25 }}
+  viewport={{ once: false, amount: 0.25 }}
  className='font-secondary 
  lg:pb-20
  xsm:pb-10 xsm:pt-8
@@ -100,7 +100,7 @@ xsm:pb-3 xsm:flex-col xsm:justify-start
             variants={formItemVariants}
                initial="hidden"
                whileInView="show"
-               viewport={{ once: true, amount: 0.25 }}
+               viewport={{ once: false, amount: 0.25 }}
                transition={{ duration: 1, ease: 'easeInOut' }}
                className='font-secondary xsm:text-[26px] lg:text-[32px]'
           >
@@ -111,7 +111,7 @@ xsm:pb-3 xsm:flex-col xsm:justify-start
             variants={formItemVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#D3E97A] font-secondary xsm:text-[17px] lg:text-[18px]'>
@@ -123,7 +123,7 @@ Webbuggs
             variants={formItemVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#C7C7C7] font-secondary xsm:text-[17px] lg:text-[18px]'>
@@ -136,7 +136,7 @@ Aug 2025 - May 2026
             variants={formItemVariants}
                initial="hidden"
                whileInView="show"
-               viewport={{ once: true, amount: 0.25 }}
+               viewport={{ once: false, amount: 0.25 }}
                transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#C7C7C7] xsm:text-[17px] lg:text-[18px] leading-[1.7]'>
@@ -150,7 +150,7 @@ Aug 2025 - May 2026
         variants={formItemVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.25 }}
       className='font-secondary
  lg:pb-20
  xsm:pb-10 xsm:pt-8
@@ -165,7 +165,7 @@ xsm:pb-3 xsm:flex-col xsm:justify-start
             variants={formItemVariants}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: false, amount: 0.25 }}
                transition={{ duration: 1, ease: 'easeInOut' }}
               className='font-secondary xsm:text-[26px] lg:text-[32px]'
           >
@@ -175,7 +175,7 @@ xsm:pb-3 xsm:flex-col xsm:justify-start
              variants={formItemVariants}
                initial="hidden"
                whileInView="show"
-               viewport={{ once: true, amount: 0.25 }}
+               viewport={{ once: false, amount: 0.25 }}
              transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#D3E97A] font-secondary xsm:text-[17px] lg:text-[18px]'>
@@ -187,7 +187,7 @@ Meta Melon
              variants={formItemVariants}
                initial="hidden"
                whileInView="show"
-               viewport={{ once: true, amount: 0.25 }}
+               viewport={{ once: false, amount: 0.25 }}
              transition={{ duration: 1, ease: 'easeInOut' }}
 
                 className='text-[#C7C7C7] font-secondary xsm:text-[17px] lg:text-[18px]'>
@@ -200,7 +200,7 @@ Meta Melon
              variants={formItemVariants}
                initial="hidden"
                whileInView="show"
-               viewport={{ once: true, amount: 0.25 }}
+               viewport={{ once: false, amount: 0.25 }}
               transition={{ duration: 1, ease: 'easeInOut' }}
 
             className='text-[#C7C7C7] xsm:text-[17px] lg:text-[18px] leading-[1.7]'>

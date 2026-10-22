@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import AboutmeHeader from '@/Pages/about/AboutmeHeader';
-import AboutMeSecondSection from '@/Pages/about/AboutMeSecondSection';
-import AboutMeThirdSection from '@/Pages/about/AboutMeThirdSection';
+import AboutmeHeader from '@/sections/about/AboutmeHeader';
+import AboutMeSecondSection from '@/sections/about/AboutMeSecondSection';
+import AboutMeThirdSection from '@/sections/about/AboutMeThirdSection';
 
 
 const Page = () => {

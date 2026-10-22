@@ -11,6 +11,8 @@ const Navbar = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  if (pathname === '/contact') return null;
+
 
 
   return (

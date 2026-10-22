@@ -1,9 +1,9 @@
 "use client";
 
 
-import WorkFeaturedProject from '@/Pages/work/WorkFeaturedProject';
-import WorkHeader from '@/Pages/work/WorkHeader';
-// import WorkSecondSection from "@/Pages/work/WorkSecondSection";
+import WorkFeaturedProject from '@/sections/work/WorkFeaturedProject';
+import WorkHeader from '@/sections/work/WorkHeader';
+// import WorkSecondSection from "@/sections/work/WorkSecondSection";
 
 const ParallaxSection = () => {
 

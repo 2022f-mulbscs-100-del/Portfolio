@@ -11,6 +11,9 @@ import AnimatedButton from '@/components/buttons/AnimatedButton';
 const Footer = () => {
     const pathname = usePathname();
     const date = new Date().getFullYear();
+    const isHomePage = pathname === '/';
+
+    if (pathname === '/contact') return null;
 
     const navLinks = [
         { label: 'Home', href: '/' },
@@ -23,10 +26,10 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="w-full bg-[#0a0a0a] border-t border-white/[0.06]">
+        <footer className={`w-full bg-[#0a0a0a] ${isHomePage ? '' : 'border-t border-white/[0.06]'}`}>
 
             {/* Top CTA strip */}
-            <div className="lg:px-[108px] xsm:px-6 pt-16 pb-12 border-b border-white/[0.06]">
+            <div className={`lg:px-[108px] xsm:px-6 pt-16 pb-12 ${isHomePage ? '' : 'border-b border-white/[0.06]'}`}>
                 <div className="flex lg:flex-row xsm:flex-col lg:items-end justify-between gap-6">
                     <div>
                         <p className="text-white/30 text-xs tracking-[0.2em] uppercase mb-3">Available for work</p>
@@ -109,7 +112,7 @@ const Footer = () => {
             </div>
 
             {/* Bottom bar */}
-            <div className="lg:px-[108px] xsm:px-6 py-5 border-t border-white/[0.06] flex lg:flex-row xsm:flex-col gap-3 justify-between items-center">
+            <div className={`lg:px-[108px] xsm:px-6 py-5 flex lg:flex-row xsm:flex-col gap-3 justify-between items-center ${isHomePage ? '' : 'border-t border-white/[0.06]'}`}>
                 <p className="text-white/20 text-xs">© {date} Zohaib Ali. All rights reserved.</p>
                 <p className="text-white/20 text-xs">Designed & Built by Zohaib Ali</p>
             </div>

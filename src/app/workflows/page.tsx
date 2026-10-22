@@ -1,5 +1,5 @@
 
-// import Workflows from "@/Pages/workflows/workflows";
+// import Workflows from "@/sections/workflows/workflows";
 // import PageGlassWrapper from "../../components/PageGlassWrapper";
 
 export default function WorkflowsPage() {

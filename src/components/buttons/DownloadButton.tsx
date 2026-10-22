@@ -33,8 +33,9 @@ const DownloadButton = ({ title, text }: ButtonProps) => {
         md:h-[54px]
       "
     >
-      <motion.button
-        type="button"
+      <motion.a
+        href="/Full_Stack_Dev_Applicant.pdf"
+        download
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className={`
@@ -53,9 +54,6 @@ const DownloadButton = ({ title, text }: ButtonProps) => {
           lg:text-[16px]
           ${text || ''}
         `}
-        download
-        href="Full_Stack_Dev_Applicant.pdf"
-        as="a"
       >
         {title}
 
@@ -83,7 +81,7 @@ const DownloadButton = ({ title, text }: ButtonProps) => {
             <FiDownload className="text-white w-[18px] h-[18px]" />
           </motion.div>
         </motion.div>
-      </motion.button>
+      </motion.a>
     </motion.div>
   );
 };

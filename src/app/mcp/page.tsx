@@ -1,4 +1,4 @@
-import MCPHeader from "@/Pages/mcp/MCPHeader";
+import MCPHeader from "@/sections/mcp/MCPHeader";
 import PageGlassWrapper from "../../components/PageGlassWrapper";
 
 export default function MCPPage() {

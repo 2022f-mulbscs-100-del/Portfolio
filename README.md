@@ -16,6 +16,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Alternate homepage
+
+The screenshot-inspired homepage is kept separately in `src/sections/home/AlternateHome.tsx`.
+Set `ENABLE_ALTERNATE_HOME=true` in `.env.local` to use it at `/`; set it to
+`false` or remove the variable to show the existing homepage. Restart the dev
+server after changing the value. In production, set the server environment
+variable and restart or redeploy the app.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
