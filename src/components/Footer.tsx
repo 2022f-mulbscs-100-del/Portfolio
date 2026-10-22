@@ -2,8 +2,6 @@
 import React from 'react'
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import AnimatedButton from '@/components/buttons/AnimatedButton';
@@ -14,16 +12,6 @@ const Footer = () => {
     const isHomePage = pathname === '/';
 
     if (pathname === '/contact') return null;
-
-    const navLinks = [
-        { label: 'Home', href: '/' },
-        { label: 'Projects', href: '/work' },
-        // { label: 'Workflows', href: '/workflows' },
-        // { label: 'MCP Servers', href: '/mcp-servers' },
-        { label: 'About', href: '/about' },
-        { label: 'Skills', href: '/skills' },
-        { label: 'Contact', href: '/contact' },
-    ];
 
     return (
         <footer className={`w-full bg-[#0a0a0a] ${isHomePage ? '' : 'border-t border-white/[0.06]'}`}>
@@ -47,7 +35,7 @@ const Footer = () => {
             </div>
 
             {/* Main footer grid */}
-            <div className="grid lg:grid-cols-3 lg:px-[108px] xsm:px-6 gap-12 pt-12 pb-10">
+            <div className="grid gap-12 pt-12 pb-10 lg:grid-cols-2 lg:px-[108px] xsm:px-6">
 
                 {/* Brand col */}
                 <div className="flex flex-col gap-6">
@@ -66,24 +54,6 @@ const Footer = () => {
                                 className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-[#D3E97A] hover:border-[#D3E97A]/40 transition-all duration-300 text-sm"
                             >
                                 {social.icon}
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Links col */}
-                <div className="flex flex-col gap-5">
-                    <p className="text-white/30 text-xs tracking-[0.2em] uppercase">Quick Links</p>
-                    <div className="flex flex-col gap-3">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={`text-sm transition-all duration-300 w-fit hover:text-white ${
-                                    pathname === link.href ? 'text-white' : 'text-white/40'
-                                }`}
-                            >
-                                {link.label}
                             </Link>
                         ))}
                     </div>
